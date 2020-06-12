@@ -52,3 +52,47 @@ div.textContent = 'Hello World!';
     //console.log(circle[2]);
     console.log(heart[1]);
     //console.log(oneHeart);
+
+
+    // Less 18
+    let btnSecond = document.querySelectorAll("button"),
+        wrap = document.querySelector('.wrapperr');
+
+  // btnSecond[1].onclick = function() {
+  //     alert('Вы нажали на вторую кнопку');
+  // }; 
+
+ // btnSecond[0].addEventListener('click', function(event) {
+ //   //  console.log(event);
+ //   //let target = event.target;
+ //   //target.style.display = 'none';
+ //   console.log('Произошло событие: ' + event.type + ' на элементе '
+ //   + event.target);
+ // });
+//
+ // wrap.addEventListener('click', function(event) {
+ //   console.log('Произошло событие: ' + event.type + ' на элементе '
+ //   + event.target);
+ // });
+
+ // btn[0].addEventListener('click', function() {
+ //   alert('Вы опять нажали на вторую кнопку!');
+ // });
+
+ // btn[0].addEventListener('mouseenter', function(){
+ //   alert('Вы навели на первую кнопку');
+ // });
+
+let link = document.querySelector('a');
+
+link.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('Произошло событие: ' + event.type + ' на элементе '
+    + event.target);
+});
+
+btnSecond.forEach(function(item) {
+    item.addEventListener('mouseleave', function() {
+        console.log('Мы вышли!');
+    });
+});
